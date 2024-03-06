@@ -12,13 +12,14 @@ import java.util.List;
 @ToString
 
 @Entity
-@Table(name = "plane")
-public class Plane {
+@Table(name = "zone")
+public class Zone {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String description;
-    private List<Zone> zoneList;
+    private List<String> alligmentList;
+    private List<Province> provinceList;
 }
