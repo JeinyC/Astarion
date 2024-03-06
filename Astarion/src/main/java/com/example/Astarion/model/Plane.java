@@ -20,5 +20,8 @@ public class Plane {
     private Long id;
     private String name;
     private String description;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "zone_id")
     private List<Zone> zoneList;
 }
